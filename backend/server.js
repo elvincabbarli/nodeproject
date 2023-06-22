@@ -1,6 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const Product = require("./models/Student");
+const Students = require("./models/Student");
 const app = express();
 const cors = require('cors')
 
@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 // GET ALL STUDENTS
 app.get("/students", async (req, res) => {
   try {
-    const products = await Product.find();
+    const products = await Students.find();
     res.status(200).json(products);
   } catch (err) {
     res.status(500).json({ message: err.message });
@@ -25,7 +25,7 @@ app.get("/students", async (req, res) => {
 app.get("/students/:id", async (req, res) => {
   try {
     const { id } = req.params;
-    const products = await Product.findById(id);
+    const products = await Students.findById(id);
     res.status(200).json(products);
   } catch (err) {
     res.status(500).json({ message: err.message });
@@ -35,7 +35,7 @@ app.get("/students/:id", async (req, res) => {
 // POST STUDENTS
 app.post("/students", async (req, res) => {
   try {
-    const product = await Product.create(req.body);
+    const product = await Students.create(req.body);
     res.status(200).json(product);
   } catch (err) {
     console.log(err.message);
@@ -43,34 +43,17 @@ app.post("/students", async (req, res) => {
   }
 });
 
-// UPDATE STUDENTS
-// app.put("/students/:id", async (req, res) => {
-//   try {
-//     const { id } = req.params;
-//     const products = await Product.findByIdAndUpdate(id, req.body);
-//     if (!products) {
-//       return res.status(404).json({ message: "Cannot find this product" });
-//     }
-//     const updatedProduct = await Product.findById(id);
-//     res.status(200).json(updatedProduct);
-//   } catch (err) {
-//     res.status(500).json({ message: err.message });
-//   }
-// });
-
-
-
 
 // UPDATE student
 
 app.put("/update-student/:id", async (req, res) => {
   try {
     const { id } = req.params;
-    const products = await Product.findByIdAndUpdate(id, req.body);
+    const products = await Students.findByIdAndUpdate(id, req.body);
     if (!products) {
       return res.status(404).json({ message: "Cannot find this product" });
     }
-    const updatedProduct = await Product.findById(id);
+    const updatedProduct = await Students.findById(id);
     res.status(200).json(updatedProduct);
   } catch (err) {
     res.status(500).json({ message: err.message });
@@ -78,12 +61,12 @@ app.put("/update-student/:id", async (req, res) => {
 });
 
 
- 
+
 // DELETE STUDENTS
 app.delete("/students/:id", async (req, res) => {
   try {
     const { id } = req.params;
-    const products = await Product.findByIdAndDelete(id);
+    const products = await Students.findByIdAndDelete(id);
     if (!products) {
       return res.status(404).json({ message: "Cannot find this product" });
     }
