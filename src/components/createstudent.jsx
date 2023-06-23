@@ -1,24 +1,26 @@
 // CreateStudent Component for add new student
 
 // Import Modules
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import StudentForm from "./studentform";
 // ES6 Modules or TypeScript
 import Swal from 'sweetalert2'
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 // CommonJS
 //  let Swal = require('sweetalert2')
 
 // CreateStudent Component
 const CreateStudent = () => {
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
   const [formValues, setFormValues] = useState({
     name: "",
     email: "",
     rollno: "",
   });
+
+  setFormValues()
   // onSubmit handler
   const onSubmit = (studentObject) => {
     axios

@@ -15,7 +15,7 @@ const EditStudent = (props) => {
 
   const { id } = useParams();
 
-  console.log(id);
+  // console.log(id);
 
   //onSubmit handler
   const onSubmit = (studentObject) => {
@@ -40,7 +40,7 @@ const EditStudent = (props) => {
         setFormValues({ name, email, rollno });
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [id]);
 
   // Return student form
   return (
