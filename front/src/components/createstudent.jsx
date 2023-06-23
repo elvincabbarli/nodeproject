@@ -20,7 +20,7 @@ const CreateStudent = () => {
     rollno: "",
   });
 
-  setFormValues()
+  // setFormValues()
   // onSubmit handler
   const onSubmit = (studentObject) => {
     axios

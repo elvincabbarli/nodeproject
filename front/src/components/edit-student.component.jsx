@@ -40,7 +40,7 @@ const EditStudent = (props) => {
         setFormValues({ name, email, rollno });
       })
       .catch((err) => console.log(err));
-  }, [id]);
+  }, []);
 
   // Return student form
   return (
