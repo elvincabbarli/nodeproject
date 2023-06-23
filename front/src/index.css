@@ -12,13 +12,13 @@
   
   .form-wrapper,
   .table-wrapper {
-  max-width: 500px;
+  /* max-width: 500px; */
   margin: 0 auto;
   }
   
-  .table-wrapper {
+  /* .table-wrapper {
   max-width: 700px;
-  }
+  } */
   
   .edit-link {
   padding: 7px 10px;
@@ -50,3 +50,31 @@
   -moz-appearance: textfield;
   }
   
+
+  .main-cont{
+    /* display: flex; */
+    align-items: center;
+    /* justify-content: space-between; */
+    /* gap: 5%; */
+    /* flex-wrap: wrap; */
+    height: 70vh;
+  }
+
+.card{
+  border: 5px inset rgb(210, 16, 16) !important;
+  max-width: 300px;
+}
+
+.table-wrapper tbody , .card-btns{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card-btns{
+  justify-content: center;
+}
+
+.card-btns a{
+  width: 110px;
+}

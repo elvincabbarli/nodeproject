@@ -25,17 +25,17 @@ const DataTable = () => {
 
 return (
 	<div className="table-wrapper">
-	<Table striped bordered hover>
-		<thead>
+	{/* <Table striped bordered hover> */}
+		 {/* <thead>
 		<tr>
 			<th>Name</th>
 			<th>Email</th>
 			<th>Roll No</th>
 			<th>Action</th>
 		</tr>
-		</thead>
+		</thead>  */}
 		<tbody>{DataTable()}</tbody>
-	</Table>
+	{/* </Table> */}
 	</div>
 );
 };

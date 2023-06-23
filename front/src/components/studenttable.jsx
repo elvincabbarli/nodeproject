@@ -3,6 +3,7 @@ import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import Swal from 'sweetalert2'
+import student from '../assets/student.jpg'
 
 const StudentTableRow = (props) => {
 	const { _id, name, email, rollno } = props.obj;
@@ -31,21 +32,23 @@ const StudentTableRow = (props) => {
 	};
 
 	return (
-		<tr>
-			<td>{name}</td>
-			<td>{email}</td>
-			<td>{rollno}</td>
-			<td>
-				<Link className="edit-link"
-					to={"/edit-student/" + _id}>
-					Edit
-				</Link>
-				<Button onClick={deleteStudent}
-					size="sm" variant="danger">
-					Delete
-				</Button>
-			</td>
-		</tr>
+	<div>
+		<div className="card" >
+			<img src={student} className="card-img-top" alt="..." />
+			<div className="card-body">
+				<h5 className="card-title">Name: {name}</h5>
+				<p className="card-text">Email: {email}</p>
+				<p>No: {rollno}</p>
+				<div className="card-btns">
+					<Link to={"/edit-student/" + _id} className="btn btn-primary">Edit</Link>
+					<Link className="btn btn-danger" onClick={deleteStudent}
+						size="sm" variant="danger">
+						Delete
+					</Link>
+				</div>
+			</div>
+		</div>
+	</div>
 	);
 };
 
