@@ -10,7 +10,7 @@ const StudentTableRow = (props) => {
 	const deleteStudent = () => {
 		axios
 			.delete(
-				"https://nodeproject75.vercel.app/students/" + _id)
+				"https://nodeproject-75.onrender.com/students/" + _id)
 			.then((res) => {
 				if (res.status === 200) {
 					Swal.fire({

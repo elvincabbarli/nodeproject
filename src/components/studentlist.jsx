@@ -8,7 +8,7 @@ const [students, setStudents] = useState([]);
 
 useEffect(() => {
 	axios
-	.get("https://nodeproject75.vercel.app/students")
+	.get("https://nodeproject-75.onrender.com/students")
 	.then(({ data }) => {
 		setStudents(data);
 	})

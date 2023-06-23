@@ -22,7 +22,7 @@ const CreateStudent = () => {
   // onSubmit handler
   const onSubmit = (studentObject) => {
     axios
-      .post("https://nodeproject75.vercel.app/students", studentObject)
+      .post("https://nodeproject-75.onrender.com/students", studentObject)
       .then((res) => {
         if (res.status === 200){
           Swal.fire({

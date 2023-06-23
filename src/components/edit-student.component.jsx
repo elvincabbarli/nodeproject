@@ -20,7 +20,7 @@ const EditStudent = (props) => {
   //onSubmit handler
   const onSubmit = (studentObject) => {
     axios
-      .put("https://nodeproject75.vercel.app/update-student/" + id, studentObject)
+      .put("https://nodeproject-75.onrender.com/update-student/" + id, studentObject)
       .then((res) => {
         if (res.status === 200) {
           alert("Student successfully updated");
@@ -34,7 +34,7 @@ const EditStudent = (props) => {
   // Load data from server and reinitialize student form
   useEffect(() => {
     axios
-      .get("https://nodeproject75.vercel.app/students/" + id)
+      .get("https://nodeproject-75.onrender.com/students/" + id)
       .then((res) => {
         const { name, email, rollno } = res.data;
         setFormValues({ name, email, rollno });
