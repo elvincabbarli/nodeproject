@@ -37,8 +37,8 @@ const StudentTableRow = (props) => {
 			<img src={student} className="card-img-top" alt="..." />
 			<div className="card-body">
 				<h5 className="card-title">Name: {name}</h5>
-				<p className="card-text">Email: {email}</p>
-				<p>No: {rollno}</p>
+				<h6 className="card-text">Email: {email}</h6>
+				<h6 className="card-text">No: {rollno}</h6>
 				<div className="card-btns">
 					<Link to={"/edit-student/" + _id} className="btn btn-primary">Edit</Link>
 					<Link className="btn btn-danger" onClick={deleteStudent}
