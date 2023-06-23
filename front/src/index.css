@@ -76,4 +76,8 @@ input[type="number"] {
   .row{
     gap: 15px;
   }
+
+  .table-wrapper tbody{
+    justify-content: center;
+  }
 }
