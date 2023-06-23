@@ -8,9 +8,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors())
 
-app.get("/", (req, res) => {
-  res.send("Hello from Node Serverrrr");
-});
+// app.get("/", (req, res) => {
+//   res.send("Hello from Node Serverrrr");
+// });
 
 // GET ALL STUDENTS
 app.get("/students", async (req, res) => {
