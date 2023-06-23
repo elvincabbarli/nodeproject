@@ -38,7 +38,7 @@ const App = () => {
               </Nav> */}
 
               <Nav>
-                <Link to={"/student-list"} className="nav-link">
+                <Link to={"/student-list"} style={{fontSize: '20px' , color: '#fff'}} className="nav-link">
                   Student List
                 </Link>
               </Nav>

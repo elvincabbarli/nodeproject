@@ -22,7 +22,7 @@ return (
 
 		<Form style={{display: 'flex' , gap: '15px' , flexDirection: 'column'}}>
 		<FormGroup>
-			<Field name="name" type="text"
+			<Field name="name" type="text" placeholder='Student Name'
 				className="form-control" />
 			<ErrorMessage
 			name="name"
@@ -31,7 +31,7 @@ return (
 			/>
 		</FormGroup>
 		<FormGroup>
-			<Field name="email" type="text"
+			<Field name="email" type="text"  placeholder='Student Email'
 				className="form-control" />
 			<ErrorMessage
 			name="email"
@@ -40,7 +40,7 @@ return (
 			/>
 		</FormGroup>
 		<FormGroup>
-			<Field name="rollno" type="number"
+			<Field name="rollno" type="number"  placeholder='Student Number'
 				className="form-control" />
 			<ErrorMessage
 			name="rollno"
