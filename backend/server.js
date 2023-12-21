@@ -79,7 +79,7 @@ app.delete("/students/:id", async (req, res) => {
 // DATABASE CONNECTION
 mongoose
   .connect(
-    "mongodb+srv://elvincabbarl:qHJAfjnT8aceW4Pr@newcluster.yszklb7.mongodb.net/nodeapi?retryWrites=true&w=majority"
+    "mongodb+srv://cabbarlielvin75:czm37TM1Jg0hXeRl@studentsis.l3laitm.mongodb.net/"
   )
   .then(() => {
     console.log("Connected to DB");
