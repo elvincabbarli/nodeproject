@@ -50,6 +50,7 @@ const CreateStudent = () => {
     <StudentForm
       initialValues={formValues}
       onSubmit={onSubmit}
+      setFormValues={setFormValues}
       enableReinitialize
     >
       Create Student
